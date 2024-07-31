@@ -17,11 +17,11 @@ embeddings = train()
 
 # test
 
-text = TextExtraction(['train/invoice.pdf'])
+text = TextExtraction(['test/invoice_102857.pdf'])
 
 extracted_text = text.extract_text_from_pdf()
 
-print(f"Extracted Invoice {extracted_text}")
+# print(f"Extracted Invoice {extracted_text}")
 search = SimilaritySearch()
 results = search.semantic_search(extracted_text, embeddings, 10)
 
